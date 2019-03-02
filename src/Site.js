@@ -3,112 +3,11 @@ import React from 'react';
 const Site = props => {
 return (
   <div>
-    <nav className='navbar navbar-default navbar-fixed-top'>
-      <div className='container'>
-        <div className='navbar-header'>
-          <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
-            <span className='icon-bar'></span>
-            <span className='icon-bar'></span>
-            <span className='icon-bar'></span>                        
-          </button>
-          <a className='navbar-brand' href='#myPage'>Logo</a>
-        </div>
-        <div className='collapse navbar-collapse' id='myNavbar'>
-          <ul className='nav navbar-nav navbar-right'>
-            <li><a href='#about'>ABOUT</a></li>
-            <li><a href='#services'>SERVICES</a></li>
-            <li><a href='#portfolio'>PORTFOLIO</a></li>
-            <li><a href='#pricing'>PRICING</a></li>
-            <li><a href='#contact'>CONTACT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div className='jumbotron text-center'>
-      <h1>Company</h1> 
-      <p>We specialize in blablabla</p> 
-      <form>
-        <div className='input-group'>
-          <input type='email' className='form-control' size='50' placeholder='Email Address' required/>
-          <div className='input-group-btn'>
-            <button type='button' className='btn btn-danger'>Subscribe</button>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    {/* Container (About Section) */}
-    <div id='about' className='container-fluid'>
-      <div className='row'>
-        <div className='col-sm-8'>
-          <h2>About Company Page</h2><br />
-          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <br /><button className='btn btn-default btn-lg'>Get in Touch</button>
-        </div>
-        <div className='col-sm-4'>
-          <span className='glyphicon glyphicon-signal logo'></span>
-        </div>
-      </div>
-    </div>
-
-    <div className='container-fluid bg-grey'>
-      <div className='row'>
-        <div className='col-sm-4'>
-          <span className='glyphicon glyphicon-globe logo'></span>
-        </div>
-        <div className='col-sm-8'>
-          <h2>Our Values</h2><br />
-          <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br />
-          <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-    </div>
+    
+    {/* Container (Home and About Section) */}
 
     {/* Container (Services Section) */}
-    <div id='services' className='container-fluid text-center'>
-      <h2>SERVICES</h2>
-      <h4>What we offer</h4>
-      <br />
-      <div className='row'>
-        <div className='col-sm-4'>
-          <span className='glyphicon glyphicon-off logo-small'></span>
-          <h4>POWER</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div className='col-sm-4'>
-          <span className='glyphicon glyphicon-heart logo-small'></span>
-          <h4>LOVE</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div className='col-sm-4'>
-          <span className='glyphicon glyphicon-lock logo-small'></span>
-          <h4>JOB DONE</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-      </div>
-      <br /><br />
-      <div className='row'>
-        <div className='col-sm-4'>
-          <span className='glyphicon glyphicon-leaf logo-small'></span>
-          <h4>GREEN</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div className='col-sm-4'>
-          <span className='glyphicon glyphicon-certificate logo-small'></span>
-          <h4>CERTIFIED</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-        <div className='col-sm-4'>
-          <span className='glyphicon glyphicon-wrench logo-small'></span>
-          <h4>HARD WORK</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
-        </div>
-      </div>
-    </div>
-
+    
     {/* Container (Portfolio Section) */}
     <div id='portfolio' className='container-fluid text-center bg-grey'>
       <h2>Portfolio</h2><br />
