@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-
-import Site from './Site'
+import {BrowserRouter, Route} from 'react-router-dom';
 
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Services from './components/Services';
+import Portfolio from './components/Portfolio';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header/>
-        <Home/>
-        <Services/>
-        <Site/>
-        <Footer/>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Header/>
+
+          <Route path = '/' exact component = {Home}/>
+          <Route path = '/services' component = {Services}/>
+          <Route path = '/portfolio' component = {Portfolio}/>
+          
+          <Footer/>
+        </div>
+      </BrowserRouter>
     );
   }
 }

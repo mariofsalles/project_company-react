@@ -2,21 +2,7 @@ import React from 'react';
 
 const Home = props => {
   return ( 
-    <div>
-      
-      <div className='jumbotron text-center'>
-        <h1>Company</h1> 
-        <p>We specialize in blablabla</p> 
-        <form>
-          <div className='input-group'>
-            <input type='email' className='form-control' size='50' placeholder='Email Address' required/>
-            <div className='input-group-btn'>
-              <button type='button' className='btn btn-danger'>Subscribe</button>
-            </div>
-          </div>
-        </form>
-      </div>
-
+    <div>      
       <div id='about' className='container-fluid'>
         <div className='row'>
           <div className='col-sm-8'>
@@ -44,7 +30,6 @@ const Home = props => {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
