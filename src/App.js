@@ -25,6 +25,7 @@ class App extends Component {
           <Route path = '/contact' component = {Contact}/>
           
           <Route path = '/admin' component = {Admin}/>
+          
           <Footer/>
         </div>
       </BrowserRouter>
