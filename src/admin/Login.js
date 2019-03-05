@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 
 import {auth} from './../firebase_config';
 
@@ -7,8 +8,8 @@ class Login extends Component {
     super(props);
 
     this.state = {
-      isAuthorized: false,
-      isLogedOn: true,
+      isLoggingIn: false,
+      isAuthenticated: false,
       error: false
     }
 
@@ -19,22 +20,22 @@ class Login extends Component {
   }
 
   authUser(){
-    this.setState({isAuthenticated: true, error: false})
+    this.setState({isLoggingIn: true, error: false});
     auth.signInWithEmailAndPassword(this.email.value, this.pwd.value)
     .then(user => {
-      console.log('Usuario logado: ', user)
-      this.setState({isLogedOn: true})
+      console.log('User is logged on: ', user);
+      this.setState({isAuthenticated: true});
     })
     .catch(err => {
-      console.log('Erro: ', err)
-      this.setState({error: true, isLogedOn:false})
-    })
+      console.log('Error: ', err);
+      this.setState({error: true, isAuthenticated: false, isLoggingIn:false});
+    });
   }
 
   render(){
 
     if (this.state.isAuthenticated) {
-      
+      return <Redirect to='/admin'/>
     }
     
     return(
@@ -47,7 +48,7 @@ class Login extends Component {
             <input type="password" className="form-control" id="pwd" placeholder="Enter password" name="pwd" ref = {ref => this.pwd = ref}/>
             {this.state.error && <small id='emailHelp' className='form-text text-muted'>Autenticathe error</small>}
           </div>
-          <button type="button" className="btn btn-default btn-success" onClick={this.authUser}>Submit</button>
+          <button type="button" disabled = {this.state.isLoggingIn} className="btn btn-default btn-success" onClick={this.authUser}>Submit</button>
       </div>
     )
   }

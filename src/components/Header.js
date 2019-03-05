@@ -6,8 +6,8 @@ const Header = props => {
 
     <div>
       <div className='jumbotron text-center'>
-        <h1>Company</h1> 
-        <p>We specialize in blablabla</p> 
+        <h1>React Course</h1> 
+        <p>Course to improve the skills about React</p> 
         <form>
           <div className='input-group'>
             <input type='email' className='form-control' size='50' placeholder='Email Address' required/>
