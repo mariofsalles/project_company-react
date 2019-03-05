@@ -9,10 +9,10 @@ const firebaseConfig = {
   storageBucket: "react-project-7663c.appspot.com",
   messagingSenderId: "245013741128"
 }
-
 const app = Firebase.initializeApp(firebaseConfig);
 const config = Rebase.createClass(app.database());
 
 export const storage = app.storage();
+export const auth = app.auth();
 
 export default config;

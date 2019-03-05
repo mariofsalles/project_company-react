@@ -11,19 +11,30 @@ class AdminPortfolio extends Component{
   }
   
   portfolioSave(event){
-    console.log('Gravando');
-    
-    console.log(this.title.value);
-    console.log(this.description.value);
-    console.log(this.image);
+    const file = this.imageFile.files[0];
+    const {name, size, type} = file;
+    const ref = storage.ref(name);
 
+    ref.put(file).then(data_push => {
+      data_push.ref.getDownloadURL().then(downloadURL => {
+          const newPortifolio = {
+          title: this.title.value,
+          description: this.description.value,
+          image: downloadURL
+        }
+        config.push('portfolio', {
+          data: newPortifolio
+        });
+
+      });
+    });
 
     event.preventDefault();
   }
 
   render(){
 		return(
-      <div style={{padding: '0px 120px'}}>
+      <div className = "container">
         <h2>Portfolio - Área Administrativa</h2>
 
         <form onSubmit = {this.portfolioSave}>
@@ -40,7 +51,7 @@ class AdminPortfolio extends Component{
             <input type="file" id="imageFile" ref = {(ref)=>this.imageFile = ref}/>
           </div>
 
-          <button type='submit' className='btn btn-default'>Send</button>
+          <button type='submit' className='btn btn-success btn-lg'>Send</button>
           
         </form>
       </div>
